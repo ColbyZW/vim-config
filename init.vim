@@ -13,8 +13,16 @@ Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/tagbar'
+" Allows running a terminal inside of vim
 Plug 'tc50cal/vim-terminal'
-Plug 'https://github.com/neoclide/coc.nvim'
+" Gruvbox Theme
+Plug 'morhetz/gruvbox'
+" Language Linting and AutoComplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Nord Theme
+Plug 'shaunsingh/nord.nvim'
+" Palenight Theme
+Plug 'drewtempelmeyer/palenight.vim'
 
 set encoding=UTF-8
 
@@ -24,11 +32,13 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-1> :call CocActionAsync('jumpDefinition')<CR>
+" Turns off highlighting the last search
+nnoremap <C-s> :noh<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
-colorscheme torte
-
+set background=dark
+colorscheme palenight
